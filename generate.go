@@ -1,5 +1,5 @@
-// Package magpie provides a collection of helpers for generating html pages from markdown contents, and reading configuration files
-package magpie
+// Package ipage provides a collection of helpers for generating html pages from markdown contents, and reading configuration files
+package ipage
 
 import (
 	"bytes"

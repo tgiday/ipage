@@ -1,4 +1,4 @@
-package magpie
+package ipage
 
 import (
 	"log"
