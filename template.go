@@ -1,4 +1,4 @@
-package magpie
+package ipage
 
 import (
 	"fmt"
@@ -37,32 +37,12 @@ func NewTemp() *template.Template {
 	return t
 }
 func prin(x string) string {
-	//ht, _ := os.ReadFile("layouts/partials/" + x)
-	//if err != nil {
-	//	return "", err
-	//}
-	//htm := fmt.Sprintf(x)
-	//hm := fmt.Sprintf(`    <nav>
-	//<ul>
-	//  <li><a href="/">Home</a></li>
-	//  <li><a href="/about/">About</a></li>
-	//</ul>
-	//</nav>`)
-	//html := template.HTML(x)
+
 	return fmt.Sprint(x)
 }
 func par(x string) template.HTML {
 	ht, _ := os.ReadFile("layouts/partials/" + x)
-	//if err != nil {
-	//	return "", err
-	//}
 	htm := fmt.Sprintf(string(ht))
-	//hm := fmt.Sprintf(`    <nav>
-	//<ul>
-	//  <li><a href="/">Home</a></li>
-	//  <li><a href="/about/">About</a></li>
-	//</ul>
-	//</nav>`)
 	html := template.HTML(htm)
 	return html
 }
