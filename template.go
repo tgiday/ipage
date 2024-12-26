@@ -29,7 +29,7 @@ func GetTempFilesFromFolders(folders []string) ([]string, error) {
 // NewTemp return new template.
 func NewTemp() *template.Template {
 	t := template.New("").Funcs(template.FuncMap{
-		"generator": magpiegenerator,
+		"generator": ipagegenerator,
 		"time":      tim,
 		"parfunc":   par,
 		"print":     prin,
@@ -37,7 +37,6 @@ func NewTemp() *template.Template {
 	return t
 }
 func prin(x string) string {
-
 	return fmt.Sprint(x)
 }
 func par(x string) template.HTML {
@@ -46,8 +45,8 @@ func par(x string) template.HTML {
 	html := template.HTML(htm)
 	return html
 }
-func magpiegenerator() template.HTML {
-	htm := fmt.Sprintf(`<meta name="generator" content=%s>`, "magpie")
+func ipagegenerator() template.HTML {
+	htm := fmt.Sprintf(`<meta name="generator" content=%s>`, "ipage")
 	html := template.HTML(htm)
 	return html
 }

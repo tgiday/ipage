@@ -6,6 +6,7 @@ import (
 	"github.com/spf13/viper"
 )
 
+// Getconfig return a map of configuration settings from a configuration file
 func Getconfig(cfg string) map[string]any {
 	viper.SetConfigFile(cfg)
 	viper.AddConfigPath(".")
